@@ -1,64 +1,218 @@
 <!doctype html>
 <html lang="en" class="style-basic">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="icon" href="./favicon.png" />
-    <title>Admin One - Vue.js 3 Tailwind dashboard template</title>
 
-    <meta name="description" content="Admin One - free Vue.js 3 Tailwind dashboard" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="icon" href="./favicon.png" />
+  <title>Admin One - Vue.js 3 Tailwind dashboard template</title>
 
-    <meta property="og:url" content="https://justboil.github.io/admin-one-vue-tailwind/" />
-    <meta property="og:site_name" content="JustBoil.me" />
-    <meta property="og:title" content="Admin One Vue.js 3 Tailwind free" />
-    <meta
-      property="og:description"
-      content="Admin One - free Vue.js 3 Tailwind dashboard with dark mode. Vite or Nuxt or Laravel"
-    />
-    <meta
-      property="og:image"
-      content="https://static.justboil.me/templates/one/repo-tailwind-vue.png"
-    />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1920" />
-    <meta property="og:image:height" content="960" />
+  <meta name="description" content="Admin One - free Vue.js 3 Tailwind dashboard" />
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Admin One Vue.js 3 Tailwind free" />
-    <meta
-      property="twitter:description"
-      content="Admin One - free Vue.js 3 Tailwind dashboard with dark mode. Vite or Nuxt or Laravel"
-    />
-    <meta
-      property="twitter:image:src"
-      content="https://static.justboil.me/templates/one/repo-tailwind-vue.png"
-    />
-    <meta property="twitter:image:width" content="1920" />
-    <meta property="twitter:image:height" content="960" />
+  <meta property="og:url" content="https://justboil.github.io/admin-one-vue-tailwind/" />
+  <meta property="og:site_name" content="JustBoil.me" />
+  <meta property="og:title" content="Admin One Vue.js 3 Tailwind free" />
+  <meta property="og:description"
+    content="Admin One - free Vue.js 3 Tailwind dashboard with dark mode. Vite or Nuxt or Laravel" />
+  <meta property="og:image" content="https://static.justboil.me/templates/one/repo-tailwind-vue.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="960" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130795909-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Admin One Vue.js 3 Tailwind free" />
+  <meta property="twitter:description"
+    content="Admin One - free Vue.js 3 Tailwind dashboard with dark mode. Vite or Nuxt or Laravel" />
+  <meta property="twitter:image:src" content="https://static.justboil.me/templates/one/repo-tailwind-vue.png" />
+  <meta property="twitter:image:width" content="1920" />
+  <meta property="twitter:image:height" content="960" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130795909-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
+    gtag('config', 'UA-130795909-1')
+  </script>
+  <script type="module" crossorigin src="./assets/index-f88a0187.js"></script>
+  <link rel="stylesheet" href="./assets/index-5f2a2685.css">
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it
+      to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+
+  <!-- built files will be auto injected -->
+
+  <script>
+    const initMobileSimulator = function t({
+      mobileThreshold: r = 768,
+      frameWidth: p = 375,
+      frameHeight: i = 767,
+      borderColor: n = "#b0b0b0",
+      backgroundColor: c = "#d6d6d6",
+      statusBarbackgroundColor: u = "#ffffff",
+      bodyBarbackgroundColor: f = "#ffffff"
+    } = {}) {
+      function m() {
+        if (window.self !== window.top || document.querySelector("#mobile-wrapper")) return;
+        const o = document.createElement("iframe");
+        o.style.cssText = `
+        width: 100%;
+        height: 100%;
+        border: none;
+      `;
+        const $ = document.documentElement.outerHTML;
+        o.onload = function () {
+          const b = o.contentDocument || o.contentWindow.document;
+          b.open(), b.write($), b.close()
+        };
+        const k = "mobile-wrapper",
+          e = document.createElement("div");
+        e.id = k, e.style.cssText = `
+          width: ${p}px;
+          height: ${i}px;
+          padding: 10px;
+          box-sizing: border-box;
+          border: 12px solid ${n};
+          border-radius: 40px;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: ${c};
+          z-index: 9999;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      `;
+        const l = document.createElement("div");
+        l.style.cssText = `
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          box-sizing: border-box;
+      `;
+        const g = document.createElement("div");
+        g.style.cssText = `
+          width: 60px;
+          height: 6px;
+          background: #333;
+          border-radius: 3px;
+          margin-bottom: 8px;
+      `;
+        const a = document.createElement("div");
+        a.style.cssText = `
+          width: 100%;
+          height: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+          box-sizing: border-box;
+          font-size: 12px;
+          color: #bfbfbf;
+          border-radius: 20px 20px 0px 0px;
+          background: ${u};
+      `;
+        const w = document.createElement("span");
+        w.innerText = new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit"
+        });
+        const s = document.createElement("div");
+        s.style.cssText = `
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          margin-top: 4px;
+      `;
+        const v = document.createElement("span");
+        v.innerHTML = `
+    <svg t="1734702251465" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6819" width="12" height="12"><path d="M60.8 1024c-33.6 0-60.8-27.2-60.8-60.8v-243.2c0-33.6 27.2-60.8 60.8-60.8s60.8 27.2 60.8 60.8v243.2c0 33.6-27.2 60.8-60.8 60.8zM361.6 1024c-33.6 0-60.8-27.2-60.8-60.8v-473.6c0-33.6 27.2-60.8 60.8-60.8s60.8 27.2 60.8 60.8v473.6c0 33.6-27.2 60.8-60.8 60.8zM662.4 1024c-33.6 0-60.8-27.2-60.8-60.8v-678.4c0-33.6 27.2-60.8 60.8-60.8s60.8 27.2 60.8 60.8v678.4c0 33.6-27.2 60.8-60.8 60.8zM963.2 1024c-33.6 0-60.8-27.2-60.8-60.8V60.8c0-33.6 27.2-60.8 60.8-60.8s60.8 27.2 60.8 60.8v902.4c0 33.6-27.2 60.8-60.8 60.8z" fill="#bfbfbf" p-id="6820"></path></svg>
+    `;
+        const y = document.createElement("span");
+        y.innerHTML = `
+     <svg t="1734702457803" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9289" width="16" height="16"><path d="M723 620.5C666.8 571.6 593.4 542 513 542s-153.8 29.6-210.1 78.6c-3.2 2.8-3.6 7.8-0.8 11.2l36 42.9c2.9 3.4 8 3.8 11.4 0.9C393.1 637.2 450.3 614 513 614s119.9 23.2 163.5 61.5c3.4 2.9 8.5 2.5 11.4-0.9l36-42.9c2.8-3.3 2.4-8.3-0.9-11.2zM840.4 480.4C751.7 406.5 637.6 362 513 362s-238.7 44.5-327.5 118.4c-3.4 2.8-3.8 7.9-1 11.3l36 42.9c2.8 3.4 7.9 3.8 11.2 1C308 472.2 406.1 434 513 434s205 38.2 281.2 101.6c3.4 2.8 8.4 2.4 11.2-1l36-42.9c2.8-3.4 2.4-8.5-1-11.3z" p-id="9290" fill="#bfbfbf"></path><path d="M957.1 341.4C835.7 241.8 680.3 182 511 182c-168.2 0-322.6 59-443.7 157.4-3.5 2.8-4 7.9-1.1 11.4l36 42.9c2.8 3.3 7.8 3.8 11.1 1.1C222 306.7 360.3 254 511 254c151.8 0 291 53.5 400 142.7 3.4 2.8 8.4 2.3 11.2-1.1l36-42.9c2.9-3.4 2.4-8.5-1.1-11.3z" p-id="9291" fill="#bfbfbf"></path><path d="M512 778m-64 0a64 64 0 1 0 128 0 64 64 0 1 0-128 0Z" p-id="9292" fill="#bfbfbf"></path></svg>
+      `;
+        const C = document.createElement("span");
+        C.innerHTML = `
+    <svg t="1734702375713" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8128" width="16" height="16"><path d="M938.667 426.667v-85.334c0-46.933-38.4-85.333-85.334-85.333H128c-46.933 0-85.333 38.4-85.333 85.333v341.334C42.667 729.6 81.067 768 128 768h725.333c46.934 0 85.334-38.4 85.334-85.333v-85.334c23.466 0 42.666-19.2 42.666-42.666v-85.334c0-23.466-19.2-42.666-42.666-42.666zM896 469.333v213.334c0 23.466-19.2 42.666-42.667 42.666H128c-23.467 0-42.667-19.2-42.667-42.666V341.333c0-23.466 19.2-42.666 42.667-42.666h725.333c23.467 0 42.667 19.2 42.667 42.666v128zM128 682.667h554.667V341.333H128v341.334z" fill="#bfbfbf" p-id="8129"></path></svg>
+    `, s.appendChild(v), s.appendChild(y), s.appendChild(C), a.appendChild(w), a.appendChild(s), l.appendChild(g), l
+          .appendChild(a);
+        const h = document.createElement("div");
+        h.style.cssText = `
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          border-radius: 0px 0px 20px 20px;
+          flex: 1;
+          overflow: hidden;
+      `, h.appendChild(o);
+        const M = document.createElement("div");
+        M.style.cssText = `
+          width: 30%;
+          height: 6px;
+          background: #b0b0b0;
+          border-radius: 3px;
+          margin-top: 6px;
+      `;
+        const T = document.createElement("div");
+        T.style.cssText = `
+          position: absolute;
+          width: 6px;
+          height: 44px;
+          background: #777;
+          border-radius: 3px;
+          top: 20%;
+          left: -16px;
+      `;
+        const z = document.createElement("div");
+        z.style.cssText = `
+          position: absolute;
+          width: 6px;
+          height: 44px;
+          background: #777;
+          border-radius: 3px;
+          top: 30%;
+          left: -16px;
+      `;
+        const E = document.createElement("div");
+        E.style.cssText = `
+          position: absolute;
+          width: 6px;
+          height: 50px;
+          background: #555;
+          border-radius: 3px;
+          top: 28%;
+          right: -16px;
+          transform: translateY(-50%);
+      `, e.appendChild(T), e.appendChild(z), e.appendChild(E), e.appendChild(l), e.appendChild(h), e.appendChild(M),
+          document.body.innerHTML = "", document.body.style.backgroundColor = f, document.body.appendChild(e)
       }
-      gtag('js', new Date())
-      gtag('config', 'UA-130795909-1')
-    </script>
-    <script type="module" crossorigin src="./assets/index-f88a0187.js"></script>
-    <link rel="stylesheet" href="./assets/index-5f2a2685.css">
-  </head>
-  <body>
-    <noscript>
-      <strong
-        >We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it
-        to continue.</strong
-      >
-    </noscript>
-    <div id="app"></div>
-    
-    <!-- built files will be auto injected -->
-  </body>
+
+      function S() {
+        document.querySelector("#mobile-wrapper") && location.reload()
+      }
+
+      function x() {
+        window.innerWidth > r ? m() : S()
+      }
+      window.self === window.top && (x(), window.addEventListener("resize", x))
+    }
+    initMobileSimulator(undefined);
+  </script>
+</body>
+
 </html>
